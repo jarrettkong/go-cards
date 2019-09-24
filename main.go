@@ -1,8 +1,10 @@
 package main
 
-func main() {
-	cards := deck{"Ace of Spades", "Five of Diamonds"}
-	cards = append(cards, "Joker")
+import "fmt"
 
+func main() {
+	cards := newDeck()
+	hand, cards := cards.deal(4)
 	cards.print()
+	fmt.Println(hand)
 }
